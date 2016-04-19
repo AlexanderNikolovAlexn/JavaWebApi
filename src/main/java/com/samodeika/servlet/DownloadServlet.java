@@ -40,11 +40,20 @@ public class DownloadServlet extends HttpServlet {
         InternalResolver internalResolver = new InternalResolver();
         File file = new File("default");
         OutputStream outStream = resp.getOutputStream();
+        String headerKey;
+        String headerValue;
         switch (fileType) {
             case Constants.C_JSON:
                 internalResolver = downloadJson(persons);
                 file = FileUtils.writeToFile(internalResolver.getFileName(), internalResolver.getContent());
                 FileInputStream inStream = new FileInputStream(file);
+
+                headerKey = "Content-Disposition";
+                headerValue = String.format("attachment; filename=\"%s\"", file.getName());
+
+                resp.setHeader(headerKey, headerValue);
+                resp.setContentType(internalResolver.getContentType());
+                resp.setContentLength((int) internalResolver.getContentLenght());
 
                 // obtains response's output stream
                 byte[] buffer = new byte[4096];
@@ -59,7 +68,12 @@ public class DownloadServlet extends HttpServlet {
                 internalResolver = downloadXls(persons);
                 XLSProcessorImpl xlsProcessor = new XLSProcessorImpl();
                 XSSFWorkbook workbook = xlsProcessor.getXls(persons);
-                //file = FileUtils.writeToFile(internalResolver.getFileName(), internalResolver.getContent());
+                file = FileUtils.writeToFile(internalResolver.getFileName(), internalResolver.getContent());
+                headerKey = "Content-Disposition";
+                headerValue = String.format("attachment; filename=\"%s\"", file.getName());
+
+                resp.setHeader(headerKey, headerValue);
+                resp.setContentType(internalResolver.getContentType());
                 workbook.write(outStream);
                 break;
             case Constants.C_XML:
@@ -67,12 +81,7 @@ public class DownloadServlet extends HttpServlet {
                 break;
         }
 
-        String headerKey = "Content-Disposition";
-        String headerValue = String.format("attachment; filename=\"%s\"", file.getName());
-        resp.setHeader(headerKey, headerValue);
-        resp.setContentType(internalResolver.getContentType());
-        resp.setContentLength((int) internalResolver.getContentLenght());
-
+        outStream.flush();
         outStream.close();
     }
 

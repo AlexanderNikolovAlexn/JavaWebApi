@@ -2,34 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0d86c5f-6d58-435a-9c27-09c7345150dd" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\.idea\libraries\Maven__commons_codec_commons_codec_1_9.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\.idea\libraries\Maven__org_apache_poi_poi_3_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\.idea\libraries\Maven__org_apache_poi_poi_ooxml_3_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\.idea\libraries\Maven__org_apache_poi_poi_ooxml_schemas_3_11.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\.idea\libraries\Maven__org_apache_xmlbeans_xmlbeans_2_6_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\classes\com\samodeika\json\JsonProccessor.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\classes\com\samodeika\json\JsonProccessorImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\target\classes\com\samodeika\json\JsonProccessor.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\target\classes\com\samodeika\json\JsonProccessorImpl.class" afterPath="" />
-      <change type="MOVED" beforePath="C:\GIT Projects\Java\JavaWebApi\src\main\java\com\samodeika\json\JsonProccessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/samodeika/json/JsonProcessor.java" />
-      <change type="MOVED" beforePath="C:\GIT Projects\Java\JavaWebApi\src\main\java\com\samodeika\json\JsonProccessorImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/samodeika/json/JsonProcessorImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebApi_war_exploded/WEB-INF/classes/com/samodeika/servlet/DownloadServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebApi_war_exploded/WEB-INF/classes/com/samodeika/servlet/DownloadServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/samodeika/servlet/DownloadServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/samodeika/servlet/DownloadServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebApi_war_exploded/WEB-INF/classes/com/samodeika/dao/PersonDaoImpl.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebApi_war_exploded/WEB-INF/classes/com/samodeika/dao/PersonDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/samodeika/dao/PersonDaoImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/samodeika/dao/PersonDaoImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebApi_war_exploded/WEB-INF/classes/com/samodeika/servlet/UploadServlet.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebApi_war_exploded/WEB-INF/classes/com/samodeika/servlet/UploadServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/samodeika/servlet/UploadServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/samodeika/servlet/UploadServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/JavaWebApi_war_exploded/WEB-INF/classes/com/samodeika/xls/XLSProcessor.class" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebApi_war_exploded/WEB-INF/classes/com/samodeika/xls/XLSProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/samodeika/xls/XLSProcessor.class" afterPath="$PROJECT_DIR$/target/classes/com/samodeika/xls/XLSProcessor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/samodeika/servlet/DownloadServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/samodeika/servlet/DownloadServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaWebApi.iml" afterPath="$PROJECT_DIR$/JavaWebApi.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/samodeika/dao/PersonDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/samodeika/dao/PersonDaoImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/samodeika/servlet/UploadServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/samodeika/servlet/UploadServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/samodeika/xls/XLSProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/samodeika/xls/XLSProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaWebApi.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,8 +29,8 @@
       <file leaf-file-name="DownloadServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/samodeika/servlet/DownloadServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5808656">
-              <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6810934">
+              <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -105,8 +78,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/samodeika/xls/XLSProcessorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/samodeika/json/JsonProcessorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/samodeika/json/JsonProcessor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/samodeika/servlet/DownloadServlet.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/samodeika/servlet/DownloadServlet.java" />
       </list>
     </option>
   </component>
@@ -855,12 +828,12 @@
       <workItem from="1460700913755" duration="9576000" />
       <workItem from="1460962186635" duration="6125000" />
       <workItem from="1460968439976" duration="3772000" />
-      <workItem from="1460978898800" duration="11137000" />
+      <workItem from="1460978898800" duration="11736000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30610000" />
+    <option name="totallyTimeSpent" value="31209000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
@@ -1123,8 +1096,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/samodeika/servlet/DownloadServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5808656">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6810934">
+          <caret line="60" column="38" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
           <folding />
         </state>
       </provider>
