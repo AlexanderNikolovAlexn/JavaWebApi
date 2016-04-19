@@ -9,9 +9,9 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JsonProccessorImpl {
+public class JsonProcessorImpl {
 
-    public static List<Person> proccessJsonFile(InputStream in) {
+    public static List<Person> proccessFile(InputStream in) {
         System.out.println("Read json file");
         String fileContent = FileUtils.getFileContent(in);
         JSONObject json = new JSONObject(fileContent);
@@ -26,7 +26,7 @@ public class JsonProccessorImpl {
         return persons;
     }
 
-    public static JSONObject getJson(List<Person> persons) {
+    public JSONObject getJson(List<Person> persons) {
         List<Person> personList = persons;
         JSONObject result = new JSONObject();
         JSONArray personArray = new JSONArray();

@@ -3,7 +3,7 @@ package com.samodeika.servlet;
 import com.samodeika.dao.PersonDao;
 import com.samodeika.dao.PersonDaoImpl;
 import com.samodeika.entity.Person;
-import com.samodeika.json.JsonProccessorImpl;
+import com.samodeika.json.JsonProcessorImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -34,7 +34,7 @@ public class UploadServlet extends HttpServlet {
 
         List<Person> persons = new ArrayList<Person>();
         for(Part part : parts) {
-            List<Person> tmp = JsonProccessorImpl.proccessJsonFile(part.getInputStream());
+            List<Person> tmp = JsonProcessorImpl.proccessFile(part.getInputStream());
             persons.addAll(tmp);
         }
 

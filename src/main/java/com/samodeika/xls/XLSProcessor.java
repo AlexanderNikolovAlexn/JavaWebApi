@@ -7,6 +7,6 @@ import java.util.List;
 
 public interface XLSProcessor {
 
-    XSSFWorkbook process(List<Person> persons);
+    XSSFWorkbook getXls(List<Person> persons);
 
 }

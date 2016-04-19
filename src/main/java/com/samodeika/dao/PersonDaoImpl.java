@@ -37,10 +37,9 @@ public class PersonDaoImpl implements PersonDao {
         try (Connection c = getConnection()) {
             c.setAutoCommit(false);
             for(Person person : persons) {
-                PreparedStatement ps = c.prepareStatement("INSERT INTO person(id, name, age) values(?, ?, ?)");
-                ps.setLong(1, person.getId());
-                ps.setString(2, person.getName());
-                ps.setInt(3, person.getAge());
+                PreparedStatement ps = c.prepareStatement("INSERT INTO person(name, age) values(?, ?)");
+                ps.setString(1, person.getName());
+                ps.setInt(2, person.getAge());
                 ps.execute();
             }
             c.commit();
