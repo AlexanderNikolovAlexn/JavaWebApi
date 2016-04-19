@@ -1,9 +1,14 @@
 package com.samodeika.servlet;
 
+import com.samodeika.constants.Constants;
 import com.samodeika.dao.PersonDao;
 import com.samodeika.dao.PersonDaoImpl;
 import com.samodeika.entity.Person;
+import com.samodeika.json.JsonProcessor;
 import com.samodeika.json.JsonProcessorImpl;
+import com.samodeika.xls.XLSProcessor;
+import com.samodeika.xls.XLSProcessorImpl;
+import org.apache.commons.io.IOUtils;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -14,7 +19,6 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 @WebServlet(name = "UploadServlet", urlPatterns = {"/UploadServlet", "/"})
@@ -30,13 +34,25 @@ public class UploadServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("Request method: " + req.getMethod());
-        Collection<Part> parts = req.getParts();
+        String fileType = req.getParameter("fileType");
+        Part part = req.getPart("data");
 
         List<Person> persons = new ArrayList<Person>();
-        for(Part part : parts) {
-            List<Person> tmp = JsonProcessorImpl.proccessFile(part.getInputStream());
-            persons.addAll(tmp);
+        List<Person> tmp = new ArrayList<>();
+        switch (fileType) {
+            case Constants.C_JSON:
+                JsonProcessor jsonProcessor = new JsonProcessorImpl();
+                tmp = jsonProcessor.processFile(part.getInputStream());
+                break;
+            case Constants.C_XLS:
+                XLSProcessor xlsProcessor = new XLSProcessorImpl();
+                tmp = xlsProcessor.processFile(part.getInputStream());
+                break;
+            case Constants.C_XML:
+                break;
         }
+
+        persons.addAll(tmp);
 
         PersonDao dao = new PersonDaoImpl();
 

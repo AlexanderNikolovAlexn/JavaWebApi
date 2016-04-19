@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface JsonProcessor {
 
-    List<Person> proccessFile(InputStream in);
+    List<Person> processFile(InputStream in);
     JSONObject getJson(List<Person> persons);
 
 }

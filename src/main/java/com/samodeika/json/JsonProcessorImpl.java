@@ -1,19 +1,26 @@
 package com.samodeika.json;
 
 import com.samodeika.entity.Person;
-import com.samodeika.utils.FileUtils;
+import org.apache.commons.io.IOUtils;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JsonProcessorImpl {
+public class JsonProcessorImpl implements JsonProcessor{
 
-    public static List<Person> proccessFile(InputStream in) {
+    @Override
+    public List<Person> processFile(InputStream in) {
         System.out.println("Read json file");
-        String fileContent = FileUtils.getFileContent(in);
+        String fileContent = null;
+        try {
+            fileContent = IOUtils.toString(in);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         JSONObject json = new JSONObject(fileContent);
         JSONArray array = json.getJSONArray("persons");
         List<Person> persons = new ArrayList<Person>();
@@ -26,6 +33,7 @@ public class JsonProcessorImpl {
         return persons;
     }
 
+    @Override
     public JSONObject getJson(List<Person> persons) {
         List<Person> personList = persons;
         JSONObject result = new JSONObject();
