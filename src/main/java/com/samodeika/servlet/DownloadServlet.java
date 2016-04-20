@@ -6,7 +6,10 @@ import com.samodeika.dao.PersonDaoImpl;
 import com.samodeika.entity.Person;
 import com.samodeika.json.JsonProcessorImpl;
 import com.samodeika.utils.FileUtils;
+import com.samodeika.xls.XLSProcessor;
 import com.samodeika.xls.XLSProcessorImpl;
+import com.samodeika.xml.XMLProcessor;
+import com.samodeika.xml.XMLProcessorImpl;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.json.JSONObject;
 
@@ -42,11 +45,15 @@ public class DownloadServlet extends HttpServlet {
         OutputStream outStream = resp.getOutputStream();
         String headerKey;
         String headerValue;
+        byte[] buffer = new byte[4096];
+        int bytesRead = -1;
+        FileInputStream inStream;
+
         switch (fileType) {
             case Constants.C_JSON:
                 internalResolver = downloadJson(persons);
                 file = FileUtils.writeToFile(internalResolver.getFileName(), internalResolver.getContent());
-                FileInputStream inStream = new FileInputStream(file);
+                inStream = new FileInputStream(file);
 
                 headerKey = "Content-Disposition";
                 headerValue = String.format("attachment; filename=\"%s\"", file.getName());
@@ -56,8 +63,6 @@ public class DownloadServlet extends HttpServlet {
                 resp.setContentLength((int) internalResolver.getContentLenght());
 
                 // obtains response's output stream
-                byte[] buffer = new byte[4096];
-                int bytesRead = -1;
                 while ((bytesRead = inStream.read(buffer)) != -1) {
                     outStream.write(buffer, 0, bytesRead);
                 }
@@ -66,7 +71,7 @@ public class DownloadServlet extends HttpServlet {
                 break;
             case Constants.C_XLS:
                 internalResolver = downloadXls(persons);
-                XLSProcessorImpl xlsProcessor = new XLSProcessorImpl();
+                XLSProcessor xlsProcessor = new XLSProcessorImpl();
                 XSSFWorkbook workbook = xlsProcessor.getXls(persons);
                 file = FileUtils.writeToFile(internalResolver.getFileName(), internalResolver.getContent());
                 headerKey = "Content-Disposition";
@@ -78,6 +83,21 @@ public class DownloadServlet extends HttpServlet {
                 break;
             case Constants.C_XML:
                 internalResolver = downloadXml(persons);
+                file = FileUtils.writeToFile(internalResolver.getFileName(), internalResolver.getContent());
+                inStream = new FileInputStream(file);
+                headerKey = "Content-Disposition";
+                headerValue = String.format("attachment; filename=\"%s\"", file.getName());
+
+                resp.setHeader(headerKey, headerValue);
+                resp.setContentType(internalResolver.getContentType());
+                resp.setContentLength((int) internalResolver.getContentLenght());
+
+                // obtains response's output stream
+                while ((bytesRead = inStream.read(buffer)) != -1) {
+                    outStream.write(buffer, 0, bytesRead);
+                }
+
+                inStream.close();
                 break;
         }
 
@@ -99,7 +119,7 @@ public class DownloadServlet extends HttpServlet {
 
     private InternalResolver downloadXls(List<Person> persons){
         InternalResolver result = new InternalResolver();
-        XLSProcessorImpl xlsProcessor = new XLSProcessorImpl();
+        XLSProcessor xlsProcessor = new XLSProcessorImpl();
         XSSFWorkbook workbook = xlsProcessor.getXls(persons);
 
         result.setContentType("application/xls");
@@ -111,6 +131,13 @@ public class DownloadServlet extends HttpServlet {
 
     private InternalResolver downloadXml(List<Person> persons){
         InternalResolver result = new InternalResolver();
+        XMLProcessor xmlProcessor = new XMLProcessorImpl();
+        String s = xmlProcessor.getXml(persons);
+
+        result.setContentType("application/xml");
+        result.setContentLenght(s.length());
+        result.setFileName("persons.xml");
+        result.setContent(s);
 
         return result;
     };
