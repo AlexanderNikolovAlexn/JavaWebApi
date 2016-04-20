@@ -8,7 +8,8 @@ import com.samodeika.json.JsonProcessor;
 import com.samodeika.json.JsonProcessorImpl;
 import com.samodeika.xls.XLSProcessor;
 import com.samodeika.xls.XLSProcessorImpl;
-import org.apache.commons.io.IOUtils;
+import com.samodeika.xml.XMLProcessor;
+import com.samodeika.xml.XMLProcessorImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -49,6 +50,8 @@ public class UploadServlet extends HttpServlet {
                 tmp = xlsProcessor.processFile(part.getInputStream());
                 break;
             case Constants.C_XML:
+                XMLProcessor xmlProcessor = new XMLProcessorImpl();
+                tmp = xmlProcessor.processFile(part.getInputStream());
                 break;
         }
 

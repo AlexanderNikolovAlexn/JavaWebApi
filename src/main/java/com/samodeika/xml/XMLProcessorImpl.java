@@ -37,9 +37,7 @@ public class XMLProcessorImpl implements XMLProcessor {
         try {
             JAXBContext context = JAXBContext.newInstance(PersonList.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
-            JAXBElement<PersonList> element = (JAXBElement<PersonList>) unmarshaller.unmarshal(in);
-            personList = element.getValue();
-
+            personList = (PersonList) unmarshaller.unmarshal(in);
         } catch (JAXBException e) {
             e.printStackTrace();
         }
