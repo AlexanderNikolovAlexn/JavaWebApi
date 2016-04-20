@@ -25,14 +25,13 @@ public class XLSProcessorImpl implements XLSProcessor {
             while (rows.hasNext()) {
                 Row row = rows.next();
                 // skip header
-                System.out.println("Row: " + row.toString());
-                if (hasHeader(row)) {
+                if (isHeader(row)) {
                     continue;
                 }
                 Person p = new Person();
                 for (int i = 0; i < row.getLastCellNum(); i++) {
                     if (i == 0) {
-                        p.setId((long) row.getCell(i).getNumericCellValue());
+                        p.setId((long) (row.getCell(i).getNumericCellValue()));
                     } else if (i == 1) {
                         p.setName(row.getCell(i).getStringCellValue());
                     } else if (i == 2) {
@@ -48,8 +47,9 @@ public class XLSProcessorImpl implements XLSProcessor {
         return persons;
     }
 
-    private static boolean hasHeader(Row row) {
-        return row.toString().contains("Person ID") || row.toString().contains("Name") || row.toString().contains("Age");
+    private static boolean isHeader(Row row) {
+        String s = row.getCell(1).getStringCellValue();
+        return s.contains("Person ID") || s.contains("Name") || s.contains("Age");
     }
 
     @Override
