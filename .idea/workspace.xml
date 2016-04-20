@@ -1,47 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0d86c5f-6d58-435a-9c27-09c7345150dd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/artifacts/JavaWebApi_war_exploded/WEB-INF/classes/com/samodeika/json/JsonProccessorImpl.class" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\.idea\libraries\Maven__javax_javaee_web_api_7_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\classes\com\samodeika\constants\Constants.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\classes\com\samodeika\dao\PersonDao.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\classes\com\samodeika\dao\PersonDaoImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\classes\com\samodeika\entity\Person.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\classes\com\samodeika\json\JsonProcessor.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\classes\com\samodeika\json\JsonProcessorImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\classes\com\samodeika\servlet\DownloadServlet$InternalResolver.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\classes\com\samodeika\servlet\DownloadServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\classes\com\samodeika\servlet\UploadServlet.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\classes\com\samodeika\utils\FileUtils.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\classes\com\samodeika\xls\XLSProcessor.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\classes\com\samodeika\xls\XLSProcessorImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\pages\downloadPage.jsp" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\WEB-INF\pages\uploadPage.jsp" afterPath="" />
-      <change type="DELETED" beforePath="C:\GIT Projects\Java\JavaWebApi\out\artifacts\JavaWebApi_war_exploded\index.jsp" afterPath="" />
-      <change type="MOVED" beforePath="C:\GIT Projects\Java\JavaWebApi\web\WEB-INF\pages\downloadPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/downloadPage.jsp" />
-      <change type="MOVED" beforePath="C:\GIT Projects\Java\JavaWebApi\web\WEB-INF\pages\uploadPage.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/uploadPage.jsp" />
-      <change type="MOVED" beforePath="C:\GIT Projects\Java\JavaWebApi\web\index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/samodeika/servlet/DownloadServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/samodeika/servlet/DownloadServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/samodeika/utils/FileUtils.class" afterPath="$PROJECT_DIR$/target/classes/com/samodeika/utils/FileUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/samodeika/json/JsonProcessor.class" afterPath="$PROJECT_DIR$/target/classes/com/samodeika/json/JsonProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/samodeika/json/JsonProcessorImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/samodeika/json/JsonProcessorImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/samodeika/entity/Person.class" afterPath="$PROJECT_DIR$/target/classes/com/samodeika/entity/Person.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/samodeika/servlet/UploadServlet.class" afterPath="$PROJECT_DIR$/target/classes/com/samodeika/servlet/UploadServlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/samodeika/xls/XLSProcessor.class" afterPath="$PROJECT_DIR$/target/classes/com/samodeika/xls/XLSProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/samodeika/xls/XLSProcessorImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/samodeika/xls/XLSProcessorImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JavaWebApi.iml" afterPath="$PROJECT_DIR$/JavaWebApi.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/JavaWebApi_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/JavaWebApi_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/samodeika/json/JsonProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/samodeika/json/JsonProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/samodeika/json/JsonProcessorImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/samodeika/json/JsonProcessorImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/samodeika/entity/Person.java" afterPath="$PROJECT_DIR$/src/main/java/com/samodeika/entity/Person.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/samodeika/servlet/UploadServlet.java" afterPath="$PROJECT_DIR$/src/main/java/com/samodeika/servlet/UploadServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/samodeika/xls/XLSProcessor.java" afterPath="$PROJECT_DIR$/src/main/java/com/samodeika/xls/XLSProcessor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/samodeika/xls/XLSProcessorImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/samodeika/xls/XLSProcessorImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="b0d86c5f-6d58-435a-9c27-09c7345150dd" name="Default" comment="" />
     <ignored path="JavaWebApi.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -888,12 +848,12 @@
       <workItem from="1460700913755" duration="9576000" />
       <workItem from="1460962186635" duration="6125000" />
       <workItem from="1460968439976" duration="3772000" />
-      <workItem from="1460978898800" duration="22985000" />
+      <workItem from="1460978898800" duration="23109000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42458000" />
+    <option name="totallyTimeSpent" value="42582000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
